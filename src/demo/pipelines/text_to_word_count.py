@@ -4,8 +4,7 @@ stop_words = ["a", "the", "is"]
 
 
 def _is_stop_word(word):
-    # This purposefully contains a typo
-    return word in stop_wrds
+    return word in stop_words
 
 
 def run(file_path, filter_stop_words=False):
