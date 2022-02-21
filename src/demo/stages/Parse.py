@@ -3,10 +3,16 @@ import re
 
 
 def _split_line(text: str):
+    """
+    Private utility function used to split text on new lines and spaces
+    """
     return re.split("[\n ]", text.replace(".", "").replace(",", ""))
 
 
 def text(fp):
+    """
+    Parse file as raw, unformatted text into a list of words
+    """
     result = list()
 
     with open(fp, "r") as f:
@@ -16,6 +22,9 @@ def text(fp):
 
 
 def json(fp, multiline=False):
+    """
+    Parse structured JSON into a dict of word lists
+    """
     result = dict()
 
     with open(fp, "r") as f:

@@ -2,7 +2,12 @@ from demo.stages import Reduce, Map, Parse
 
 
 def run(file_path, **kwargs):
-    # Parse words from json
+    """
+    Create a dict of word counts from a structure JSON file in the form of:
+    {
+        "text_name": "text_content"
+    }
+    """
     poems = Parse.json(file_path, *kwargs)
 
     result = dict()
