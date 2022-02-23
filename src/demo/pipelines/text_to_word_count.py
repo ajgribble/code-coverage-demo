@@ -1,3 +1,4 @@
+import sys
 from demo.stages import Reduce, Map, Parse
 
 stop_words = ["a", "and", "the", "in", "is"]
@@ -32,3 +33,10 @@ def run(file_path, filter_stop_words=False):
     result = Reduce.sum(word_tuples)
 
     return result
+
+
+if __name__ == "__main__":  # pragma: no cover
+    # Accept the first argument as a file path
+    fp = sys.argv[0]
+
+    print(run(fp))

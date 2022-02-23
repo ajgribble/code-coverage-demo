@@ -6,4 +6,4 @@
 4. Make package "editable" `pip install -e .`
 5. Run tests to test code `pytest`
 6. Run coverage to check complete test coverage `coverage run -m pytest`
-7. Run coverage command to generate HTML output `coverage html`
+7. Run coverage command to generate HTML output `pytest --cov demo --cov-report html`

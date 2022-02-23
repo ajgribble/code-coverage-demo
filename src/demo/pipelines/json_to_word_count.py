@@ -1,3 +1,4 @@
+import sys
 from demo.stages import Reduce, Map, Parse
 
 
@@ -16,3 +17,10 @@ def run(file_path, **kwargs):
         result[poem_name] = Reduce.sum(word_tuples)
 
     return result
+
+
+if __name__ == "__main__":  # pragma: no cover
+    # Accept the first argument as a file path
+    fp = sys.argv[0]
+
+    print(run(fp))
